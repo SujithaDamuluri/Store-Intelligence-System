@@ -21,29 +21,36 @@ while True:
     detections = sv.Detections.from_ultralytics(result)
 
     detections = tracker.update_with_detections(detections)
-    print("Tracker IDs:", detections.tracker_id)
-    labels = []
-
-    if detections.tracker_id is not None:
-        for track_id in detections.tracker_id:
-            labels.append(f"ID {track_id}")
 
     annotated = frame.copy()
 
-    box_annotator = sv.BoxAnnotator()
+    if detections.tracker_id is not None:
 
-    annotated = box_annotator.annotate(
-        scene=annotated,
-        detections=detections
-    )
+        for i, box in enumerate(detections.xyxy):
 
-    label_annotator = sv.LabelAnnotator()
+            x1, y1, x2, y2 = map(int, box)
 
-    annotated = label_annotator.annotate(
-        scene=annotated,
-        detections=detections,
-        labels=labels
-    )
+            track_id = detections.tracker_id[i]
+
+            print("DRAWING ID:", track_id)
+
+            cv2.rectangle(
+                annotated,
+                (x1, y1),
+                (x2, y2),
+                (255, 0, 255),
+                2
+            )
+
+            cv2.putText(
+    annotated,
+    f"ID {track_id}",
+    (50, 50),
+    cv2.FONT_HERSHEY_SIMPLEX,
+    2,
+    (0, 0, 255),
+    5
+)
 
     cv2.imshow("Visitor Tracking", annotated)
 
