@@ -85,7 +85,20 @@ GET /analytics/heatmap
 
 GET /stores/{store_id}/metrics
 
----
+--- 
+
+
+## Detection
+![Detection](screenshots/detection.png)
+
+## Tracking
+![Tracking](screenshots/tracking.png)
+
+## Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+## API Docs
+![Swagger](screenshots/swagger.png)
 
 ## Future Improvements
 
@@ -93,4 +106,4 @@ GET /stores/{store_id}/metrics
 - PostgreSQL Storage
 - Multi-store Support
 - Live Camera Processing
-- Alert Engine
+- Alert Engine 
