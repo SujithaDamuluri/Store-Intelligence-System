@@ -95,7 +95,12 @@ GET /stores/{store_id}/metrics
 ![Tracking](screenshots/tracking.png)
 
 ## Dashboard
-![Dashboard](screenshots/dashboard.png)
+
+### Dashboard View 1
+![Dashboard 1](screenshots/dashboard.png)
+
+### Dashboard View 2
+![Dashboard 2](screenshots/dashboard2.png)
 
 ## API Docs
 ![Swagger](screenshots/swagger.png)
