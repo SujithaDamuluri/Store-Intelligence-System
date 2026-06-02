@@ -1,0 +1,8 @@
+{"event_type":"zone_entered","zone_name":"Left Shelf"}
+{"event_type":"zone_entered","zone_name":"Left Shelf"}
+{"event_type":"zone_entered","zone_name":"Lipstick Aisle"}
+{"event_type":"queue_completed","wait_seconds":8}
+{"event_type":"queue_completed","wait_seconds":13}
+{"event_type":"entry"}
+{"event_type":"entry"}
+{"event_type":"exit"}
